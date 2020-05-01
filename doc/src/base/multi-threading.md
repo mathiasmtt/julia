@@ -1,14 +1,22 @@
 # [Multi-Threading](@id lib-multithreading)
 
-This experimental interface supports Julia's multi-threading capabilities. Types and functions
-described here might (and likely will) change in the future.
-
 ```@docs
-Base.Threads.threadid
-Base.Threads.nthreads
 Base.Threads.@threads
 Base.Threads.@spawn
+Base.Threads.threadid
+Base.Threads.nthreads
 ```
+
+## Synchronization
+
+```@docs
+Base.Threads.Condition
+Base.Threads.Event
+```
+
+See also [Synchronization](@ref lib-task-sync).
+
+## Atomic operations
 
 ```@docs
 Base.Threads.Atomic
@@ -31,7 +39,7 @@ Base.Threads.atomic_fence
 Base.@threadcall
 ```
 
-# Low-level synchronization primitives
+## Low-level synchronization primitives
 
 These building blocks are used to create the regular synchronization objects.
 
